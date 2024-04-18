@@ -128,8 +128,6 @@ public class TechJobs {
                 System.out.println("*****");
                 someJob.forEach((key, value) -> System.out.println(key + ": " + value));
                 System.out.println("*****");
-
-
             }
 
         }
