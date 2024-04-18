@@ -104,12 +104,13 @@ public class JobData {
         for (HashMap<String, String> job : allJobs) {
             for (Map.Entry<String, String> field : job.entrySet()) {
                 String aValue = field.getValue();
-                if(aValue.contains(value)) {
-                    jobs.add(job);
+                if (aValue.contains(value)) {
+                    if (!jobs.contains(job)) {
+                        jobs.add(job);
+                    }
                 }
             }
         }
-
        return jobs;
     }
 
