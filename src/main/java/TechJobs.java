@@ -122,12 +122,10 @@ public class TechJobs {
 
         // System.out.println("printJobs is not implemented yet");
         //Iterate through the ArrayList
-        if (someJobs.isEmpty()) {
-            System.out.print("No Results");
-        }
-        for (int i = 0; i < someJobs.size(); i++) {
 
-            for (HashMap<String, String> someJob : someJobs) {
+        for (HashMap<String, String> someJob : someJobs) {
+
+//            for (Map.Entry<String, String> item : someJob.entrySet()) {
                 System.out.println();
                 System.out.println("*****");
                 someJob.forEach((key, value) -> System.out.println(key + ": " + value));
@@ -136,5 +134,5 @@ public class TechJobs {
 
         }
     }
-}
+//}
 

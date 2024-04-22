@@ -78,7 +78,9 @@ public class JobData {
             }
 
         }
-
+        if (jobs.isEmpty()) {
+            System.out.print("No Results");
+        }
         return jobs;
     }
 
@@ -103,18 +105,19 @@ public class JobData {
 //            }
 //        }
         for (HashMap<String, String> job : allJobs) {
-            for (String field : job.keySet()) {
-                String aValue = job.get(field);
-                if (aValue.toLowerCase().contains(value.toLowerCase())) {
+
+            for (String field : job.values()) {
+                String aValue = field.toLowerCase();
+                String searchInput = value.toLowerCase();
+                if (aValue.contains(searchInput)) {
                     if (!jobs.contains(job)) {
                         jobs.add(job);
-                        break;
                     }
-
                 }
-
             }
-
+        }
+        if (jobs.isEmpty()) {
+            System.out.print("No Results");
         }
        return jobs;
     }
